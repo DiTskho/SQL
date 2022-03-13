@@ -17,7 +17,7 @@ select * from students where password = '12333';
 -- ¬ывести пользователей которые были созданы 2021-03-26 00:00:00
 select * from students where created_on = '2021-03-26 00:00:00';
 -- ¬ывести пользователей где в имени есть слово јнна
-select * from students where name like 'Anna%';
+select * from students where name like '%Anna%';
 -- ¬ывести пользователей где в имени в конце есть 8
 select * from students where name like '%8';
 -- ¬ывести пользователей где в имени в есть буква а
@@ -55,7 +55,7 @@ select MIN (id) from students ;
 -- ¬ывести максимальный
 select MAX (id) from students ;
 -- ¬ывести количество пользователей
-select user from students;
+select count (*) from students;
 -- ¬ывести id пользовател€, им€, дату создани€ пользовател€. ќтсортировать по пор€дку возрастани€ даты добавлени€ пользоватлел€
 select id, name, created_on from students order by created_on asc;
 -- ¬ывести id пользовател€, им€, дату создани€ пользовател€. ќтсортировать по пор€дку убывани€ даты добавлени€ пользоватлел€
